@@ -6,8 +6,8 @@ version = 7.x-1.0
 engine = phptemplate
 
 
-regions[sidebar_left] = Left sidebar
-regions[sidebar_right] = Right sidebar
+regions[block_a] = Block A
+regions[block_b] = Block B
 regions[content] = Content
 regions[footer] = Footer
 

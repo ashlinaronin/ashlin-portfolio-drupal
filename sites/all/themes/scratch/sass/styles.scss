@@ -2,47 +2,50 @@
 @import "zen";
 @import "zen/background";
 
-$zen-column-count: 7;
-$zen-gutter-width: 30px;
+$zen-column-count: 3;
+$zen-gutter-width: 20px;
+
+$primary-color: #FF5A5F;
+$darker-primary: darken($primary-color, 60);
+$other-primary: desaturate(darken($primary-color, 36), 73);
+$complementary: darken(adjust_hue($primary-color, 197), 54);
 
 @mixin our-border() {
-  border-width: 4px;
-  border-style: dotted;
-  border-color: brown;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $darker-primary;
 }
 
+// Import buttons and grid after vars and mixins
+@import "buttons";
+@import "grid";
 
 body {
-  font-family: Georgia, "Gill Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.container {
-  @include zen-grid-container;
-  @include zen-grid-background();
+a {
+  color: $darker-primary;
 }
 
-.sidebar_left {
-  @include zen-grid-item(1, 1);
-  @include our-border();
+h1, h2, h3, h4, h5 {
+  font-family: "Gill Sans", Georgia, sans-serif;
 }
 
-.sidebar_right {
-  @include zen-grid-item(2, 6);
-  @include our-border();
+article.center h1 {
+  color: $other-primary;
 }
 
-.center {
-  // @include zen-clear();
-  @include zen-grid-item(4, 2);
-  @include our-border();
+.region-footer a {
+  color: $complementary;
 }
 
+.region h2 {
+  color: $primary-color;
+  transform: rotate(-8deg);
+  text-align: center;
+}
 
-/*
-** Footer starts on a new row, fills full width.
-*/
-.footer {
-  @include zen-clear();
-  @include zen-grid-item(7, 1);
-  @include our-border();
+.region ul {
+  list-style: none;
 }

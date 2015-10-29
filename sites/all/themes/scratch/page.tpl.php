@@ -16,15 +16,15 @@
       <?php print render($page['content']); ?>
     </article>
 
-    <?php if ($page['sidebar_left']): ?>
-      <aside class="sidebar_left">
-        <?php print render($page['sidebar_left']); ?>
+    <?php if ($page['block_a']): ?>
+      <aside class="block_a">
+        <?php print render($page['block_a']); ?>
       </aside>
     <?php endif; ?>
 
-    <?php if ($page['sidebar_right']): ?>
-      <aside class="sidebar_right">
-        <?php print render($page['sidebar_right']); ?>
+    <?php if ($page['block_b']): ?>
+      <aside class="block_b">
+        <?php print render($page['block_b']); ?>
       </aside>
     <?php endif; ?>
 
