@@ -18,7 +18,7 @@ $complementary: darken(adjust_hue($primary-color, 197), 54);
 
 // Import buttons and grid after vars and mixins
 @import "buttons";
-@import "grid";
+
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -48,4 +48,36 @@ article.center h1 {
 
 .region ul {
   list-style: none;
+}
+
+
+
+
+
+/* Zen grids layout */
+.container {
+  @include zen-grid-container;
+  // @include zen-grid-background();
+}
+
+.center {
+  @include zen-grid-item(2, 1);
+  @include our-border();
+}
+
+.block_a {
+  @include zen-grid-item(1, 1, right);
+  @include our-border();
+}
+
+.block_b {
+  @include zen-clear(right);
+  @include zen-grid-item(1, 1, right);
+  @include our-border();
+}
+
+.footer {
+  @include zen-clear(both);
+  @include zen-grid-item(3, 1);
+  // @include our-border();
 }
