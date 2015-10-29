@@ -1,22 +1,10 @@
 <div class="container">
 
-  <header class="header">
-    <a href="<?php print $front_page;?>">
-      <img src="/<?php print $directory;?>/images/logo.png" alt="<?php print $site_name;?>" height="47" width="217" />
-    </a>
-
-    <?php if ($main_menu): ?>
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu'))); ?>
-        <?php dpm($main_menu) ?>
-        <?php dpm("hello") ?>
-    <?php endif; ?>
-
-  </header>
-
   <div id="wrapper">
 
 
-    <article class="main_content">
+
+    <article class="center">
       <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
       <?php print render($title_suffix); ?>
@@ -39,6 +27,7 @@
         <?php print render($page['sidebar_right']); ?>
       </aside>
     <?php endif; ?>
+
 
 
   </div> <!-- end wrapper -->

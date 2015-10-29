@@ -1,10 +1,11 @@
 name = Scratch Theme
 description = A bare-bare-bones Drupal theme.
 core = 7.x
+package = Themez
+version = 7.x-1.0
 engine = phptemplate
 
 
-regions[header] = Header
 regions[sidebar_left] = Left sidebar
 regions[sidebar_right] = Right sidebar
 regions[content] = Content

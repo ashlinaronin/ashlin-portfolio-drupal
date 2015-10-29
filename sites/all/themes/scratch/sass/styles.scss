@@ -1,0 +1,48 @@
+/* Import Zen Grids */
+@import "zen";
+@import "zen/background";
+
+$zen-column-count: 7;
+$zen-gutter-width: 30px;
+
+@mixin our-border() {
+  border-width: 4px;
+  border-style: dotted;
+  border-color: brown;
+}
+
+
+body {
+  font-family: Georgia, "Gill Sans", sans-serif;
+}
+
+.container {
+  @include zen-grid-container;
+  @include zen-grid-background();
+}
+
+.sidebar_left {
+  @include zen-grid-item(1, 1);
+  @include our-border();
+}
+
+.sidebar_right {
+  @include zen-grid-item(2, 6);
+  @include our-border();
+}
+
+.center {
+  // @include zen-clear();
+  @include zen-grid-item(4, 2);
+  @include our-border();
+}
+
+
+/*
+** Footer starts on a new row, fills full width.
+*/
+.footer {
+  @include zen-clear();
+  @include zen-grid-item(7, 1);
+  @include our-border();
+}
