@@ -1,0 +1,19 @@
+name = Scratch Theme
+description = A bare-bare-bones Drupal theme.
+core = 7.x
+engine = phptemplate
+
+
+regions[header] = Header
+regions[sidebar_left] = Left sidebar
+regions[sidebar_right] = Right sidebar
+regions[content] = Content
+regions[footer] = Footer
+
+stylesheets[all][] = css/styles.css
+stylesheets[print][] = css/print.css
+
+features[] = name
+features[] = main_menu
+
+scripts[] = js/scripts.js
