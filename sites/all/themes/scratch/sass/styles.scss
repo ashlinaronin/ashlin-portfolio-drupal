@@ -12,7 +12,8 @@ $complementary: darken(adjust_hue($primary-color, 197), 54);
 
 @mixin our-border() {
   border-width: 1px;
-  border-style: solid;
+  // border-style: none;
+  // border-bottom-style: solid;
   border-color: $darker-primary;
 }
 
@@ -65,15 +66,19 @@ article.center h1 {
   @include our-border();
 }
 
+.block_a, .block_b {
+  @include our-border();
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
 .block_a {
   @include zen-grid-item(1, 1, right);
-  @include our-border();
 }
 
 .block_b {
   @include zen-clear(right);
   @include zen-grid-item(1, 1, right);
-  @include our-border();
 }
 
 .footer {
