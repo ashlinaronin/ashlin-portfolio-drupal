@@ -28,15 +28,15 @@
       </aside>
     <?php endif; ?>
 
+    <footer class="footer">
+      <?php if ($page['footer']): ?>
+        <?php print render($page['footer']); ?>
+      <?php endif; ?>
+    </footer>
 
 
   </div> <!-- end wrapper -->
 
 
-  <footer class="footer">
-    <?php if ($page['footer']): ?>
-      <?php print render($page['footer']); ?>
-    <?php endif; ?>
-  </footer>
 
 </div> <!-- end container -->

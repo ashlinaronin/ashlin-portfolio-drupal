@@ -18,3 +18,8 @@ epicodal
 site maintenance account
 ashlinaronin
 drupalizeme
+
+
+gem install compass
+gem install sass
+gem install zen-grids

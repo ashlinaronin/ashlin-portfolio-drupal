@@ -18,9 +18,9 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
     // Put any jQuery / JS here
-    $(".form-actions .form-submit").hover(function() {
-      alert("You know you like this button");
-    });
+    // $(".form-actions .form-submit").hover(function() {
+    //   alert("You know you like this button");
+    // });
 
   }
 };
