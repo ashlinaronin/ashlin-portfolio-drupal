@@ -19,7 +19,9 @@ $complementary: darken(adjust_hue($primary-color, 197), 54);
 }
 
 // Import buttons and grid after vars and mixins
-@import "buttons";
+@import "_variables.scss";
+@import "_globals.scss";
+@import "_buttons.scss";
 
 
 body {
